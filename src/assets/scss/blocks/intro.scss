@@ -1,0 +1,256 @@
+.intro {
+	position: relative;
+	padding: 7.4rem 0 5.4rem;
+	margin-top: 12.3rem;
+
+	background-color: #f2f2f2;
+
+	@include bp($mobileS) {
+		margin-top: 9rem;
+		padding: 0;
+	}
+}
+.intro-left {
+	// .intro-left__inner
+	&__inner {
+		display: flex;
+		align-items: center;
+
+		background: url(@img/slider/Dell-bg-text.svg) 0 2.2rem / 55% no-repeat;
+
+		@include bp($mobileS) {
+			background: url(@img/slider/Dell-bg-text.svg) 1.7rem 1.8rem / 90% no-repeat;
+			padding: 8rem 0 1rem;
+		}
+	}
+}
+.intro-scroll {
+	display: flex;
+	align-items: center;
+	gap: 2.4rem;
+
+	margin-top: 16.9rem;
+	margin-left: -6.9rem;
+
+	transform: rotate(-90deg);
+
+	@include bp($mobileS) {
+		display: none;
+	}
+	// .intro-scroll__icon
+	&__icon {
+		transform: rotate(90deg);
+	}
+	// .intro-scroll__text
+	&__text {
+		white-space: nowrap;
+
+		color: #838383;
+		font-size: 1.6rem;
+		font-weight: 300;
+		line-height: normal;
+	}
+}
+.intro-slider {
+	position: static !important;
+	z-index: unset !important;
+}
+.intro-slide {
+	display: flex !important;
+
+	@include bp($mobileS) {
+		display: block !important;
+	}
+	// .intro-slide__info
+	&__info {
+		max-width: 40.3rem;
+	}
+	// .intro-slide__image
+	&__image {
+		max-width: 55.7rem;
+		min-width: 32.7rem;
+		height: 55.5rem;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+
+		@include bp($mobileS) {
+			max-width: 100%;
+			height: 32.5rem;
+			margin-top: 1rem;
+		}
+	}
+}
+.intro-info {
+	margin-top: 17.9rem;
+	margin-left: 3.7rem;
+
+	@include bp($mobileS) {
+		margin: 0;
+	}
+	// .intro-info__subtitle
+	&__subtitle {
+		color: #838383;
+		font-size: 1.8rem;
+		font-weight: 300;
+		line-height: 133.687%; /* 24.064px */
+
+		margin-bottom: 1.5rem;
+
+		@include bp($mobileS) {
+			margin-bottom: 0.5rem;
+		}
+	}
+	// .intro-info__title
+	&__title {
+		color: $main;
+		font-size: 5rem;
+		line-height: 1.2;
+
+		margin-bottom: 5.9rem;
+
+		@include bp($mobileS) {
+			font-size: 3rem;
+			margin-bottom: 2.8rem;
+			width: 75%;
+		}
+	}
+}
+.slider-manage {
+	position: absolute;
+	bottom: 16.3rem;
+	left: 67.5%;
+	z-index: 100;
+
+	display: flex;
+	align-items: center;
+	column-gap: 8.5rem;
+
+	@include bp($mobileS) {
+		bottom: 2.5rem;
+		left: unset;
+		right: 1.3rem;
+
+		column-gap: 4rem;
+	}
+	// .slider-manage__pagination
+	&__pagination {
+		width: auto !important;
+		position: static !important;
+		text-align: left !important;
+	}
+	// .slider-manage__arrows
+	&__arrows {
+		display: inline-flex;
+		column-gap: 2rem;
+	}
+	// .slider-manage__next
+	&__next {
+		background: none;
+		font-size: 2.2rem;
+		transition: color 0.2s linear;
+
+		&:hover {
+			color: $blue;
+		}
+
+		@include bp($mobileS) {
+			font-size: 1.4rem;
+			width: 7rem;
+		}
+	}
+	// .slider-manage__prev
+	&__prev {
+		background: none;
+		font-size: 2.2rem;
+		transition: color 0.2s linear;
+
+		&:hover {
+			color: $blue;
+		}
+
+		@include bp($mobileS) {
+			font-size: 1.4rem;
+		}
+	}
+}
+.intro-right {
+	// display: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 1;
+
+	width: 50.9rem;
+	height: 100%;
+
+	background: #f9f9f9;
+
+	@include bp($mobileS) {
+		width: 100%;
+		height: 19.6rem;
+		bottom: -19.5rem;
+		top: unset;
+		left: unset;
+		right: 0;
+	}
+	// .intro-right__container
+	&__bg {
+		width: 100%;
+		height: 100%;
+
+		background: url(@img/slider/img-2.webp) -16rem -24.4rem / 205% no-repeat;
+		opacity: 0.15;
+
+		@include bp($mobileS) {
+			background: url(@img/slider/img-2.webp) 12rem 1rem / 25.2rem no-repeat;
+			opacity: 0.35;
+		}
+	}
+	// .intro-right__text
+	&__text {
+		position: absolute;
+		width: 18.1rem;
+		margin: 32.1rem 0 0 4rem;
+
+		color: $main;
+		font-size: 2.5rem;
+		line-height: 130%; /* 32.5px */
+
+		@include bp($mobileS) {
+			margin: 5.9rem 0 0 1.5rem;
+			font-size: 2rem;
+			width: 13.6rem;
+		}
+	}
+}
+
+.swiper-pagination-bullet {
+	width: 0.5rem !important;
+	height: 0.5rem !important;
+	background-color: #d0d0d0 !important;
+
+	@include bp($mobileS) {
+		width: 0.3rem !important;
+		height: 0.3rem !important;
+	}
+
+	&-active {
+		width: 0.9rem !important;
+		height: 0.9rem !important;
+		background-color: $main !important;
+
+		@include bp($mobileS) {
+			width: 0.6rem !important;
+			height: 0.6rem !important;
+		}
+	}
+}
+
+.swiper-button-disabled {
+	display: none;
+	visibility: hidden;
+}

@@ -1,0 +1,244 @@
+.contacts {
+	position: relative;
+	padding: 18rem 0;
+
+	@include bp($mobileS) {
+		padding: 12rem 0 0;
+	}
+	&__container {
+		@include bp($mobileS) {
+			padding: 0 !important;
+		}
+	}
+	// .contacts__inner
+	&__inner {
+		display: flex;
+		border-radius: 2rem;
+		overflow: hidden;
+
+		position: relative;
+		z-index: 2;
+
+		@include bp($mobileS) {
+			flex-direction: column;
+			border-radius: 0;
+		}
+
+		&::after {
+			content: "";
+			width: 29rem;
+			height: 57.9rem;
+
+			background: url(@img/content/feedback/iphone.webp) center / contain no-repeat;
+
+			position: absolute;
+			top: 52%;
+			left: 46%;
+			z-index: 1;
+
+			transform: translate3d(-50%, -50%, 0);
+
+			@include bp($mobileS) {
+				width: 18.7rem;
+				height: 26.4rem;
+
+				top: 35%;
+				left: 47%;
+
+				transform: rotate(10deg);
+			}
+		}
+	}
+	// .contacts__left
+	&__left {
+		width: 50%;
+		padding: 10rem 12.7rem 11.1rem 10rem;
+
+		@include bp($mobileS) {
+			width: 100%;
+			padding: 10.1rem 1.5rem 6rem 3rem;
+		}
+	}
+	// .contacts__right
+	&__right {
+		width: 50%;
+		padding: 10rem 12.9rem 10.3rem;
+
+		@include bp($mobileS) {
+			width: 100%;
+			padding: 6rem 2.6rem 6rem 3rem;
+		}
+	}
+	// .contacts__background
+	&__background {
+		background: #eeeeee url(@img/content/feedback/our-contacts.svg) 10px 80% / 160.5rem no-repeat;
+		width: 100vw;
+		height: 67.6rem;
+
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		z-index: 1;
+
+		@include bp($mobileS) {
+			display: none;
+		}
+	}
+}
+.contacts-left {
+	background-color: #f9f9f9;
+	// .contacts-left__header
+	&__header {
+		margin-bottom: 4.8rem;
+
+		@include bp($mobileS) {
+			margin-bottom: 4rem;
+		}
+	}
+	// .contacts-left__title
+	&__title {
+		color: $main;
+		font-size: 5rem;
+		line-height: 5rem; /* 100% */
+
+		margin-bottom: 1.8rem;
+
+		@include bp($mobileS) {
+			font-size: 3rem;
+			margin-bottom: 1.5rem;
+		}
+	}
+	// .contacts-left__description
+	&__description {
+		color: #838383;
+		font-size: 1.6rem;
+		line-height: 150%; /* 24px */
+
+		@include bp($mobileS) {
+			font-size: 1.5rem;
+			width: 80%;
+		}
+	}
+	// .contacts-left__info
+	&__info {
+		margin-bottom: 6rem;
+	}
+	// .contacts-left__social
+	&__social {
+		display: flex;
+		align-items: center;
+		column-gap: 1.8rem;
+
+		@include bp($mobileS) {
+			column-gap: 1.2rem;
+		}
+	}
+}
+.contacts-info {
+	// .contacts-info__item
+	&__item {
+		display: flex;
+		column-gap: 1.7rem;
+
+		&:not(:last-child) {
+			margin-bottom: 5rem;
+
+			@include bp($mobileS) {
+				margin-bottom: 3rem;
+			}
+		}
+
+		@include bp($mobileS) {
+			column-gap: 1rem;
+		}
+	}
+	// .contacts-info__icon
+	&__icon {
+		width: 3.6rem;
+
+		img {
+			max-width: 100%;
+			object-fit: contain;
+		}
+
+		@include bp($mobileS) {
+			width: 1.8rem;
+		}
+	}
+	// .contacts-info__text
+	&__text {
+		width: 70%;
+		margin-top: 0.7rem;
+
+		@include bp($mobileS) {
+			margin-top: 0;
+			width: 80%;
+		}
+	}
+	// .contacts-info__title
+	&__title {
+		color: #838383;
+		font-size: 1.8rem;
+		line-height: 133.687%; /* 24.064px */
+
+		margin-bottom: 0.8rem;
+
+		@include bp($mobileS) {
+			font-size: 1.5rem;
+			margin-bottom: 0;
+		}
+	}
+	// .contacts-info__description
+	&__description {
+		color: $main;
+		font-size: 2.2rem;
+		line-height: 150%; /* 33px */
+		a {
+			display: block;
+			width: 60%;
+			color: inherit;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+		@include bp($mobileS) {
+			font-size: 1.8rem;
+		}
+	}
+}
+.contacts-right {
+	background-color: $main;
+	// .contacts-right__header
+	&__header {
+		margin-bottom: 6.575rem;
+
+		@include bp($mobileS) {
+			margin-bottom: 5.5rem;
+		}
+	}
+	// .contacts-right__title
+	&__title {
+		color: $white;
+		font-size: 5rem;
+		line-height: 5rem; /* 100% */
+
+		margin-bottom: 1.8rem;
+
+		@include bp($mobileS) {
+			font-size: 3rem;
+			margin-bottom: 1rem;
+		}
+	}
+	// .contacts-right__description
+	&__description {
+		color: $white;
+		font-size: 1.6rem;
+		line-height: 150%; /* 24px */
+
+		@include bp($mobileS) {
+			font-size: 1.5rem;
+		}
+	}
+}

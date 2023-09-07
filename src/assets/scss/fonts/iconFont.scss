@@ -1,0 +1,45 @@
+[class^="icons__icon-"],
+[class*=" icons__icon-"] {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: "iconFont" !important;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icons__icon-arrow-left-slider:before {
+	content: "\e900";
+}
+.icons__icon-arrow-right-slider:before {
+	content: "\e901";
+}
+.icons__icon-facebook:before {
+	content: "\e902";
+}
+.icons__icon-whatsapp:before {
+	content: "\e903";
+}
+.icons__icon-arrow-right:before {
+	content: "\e904";
+}
+.icons__icon-level:before {
+	content: "\e905";
+}
+.icons__icon-bucket:before {
+	content: "\e906";
+}
+.icons__icon-favorite:before {
+	content: "\e907";
+}
+.icons__icon-profile:before {
+	content: "\e908";
+}
+.icons__icon-search:before {
+	content: "\e909";
+}

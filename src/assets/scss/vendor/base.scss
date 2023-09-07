@@ -1,0 +1,170 @@
+.btn {
+	width: 5.5rem;
+	height: 5.5rem;
+
+	background-color: $blue;
+	border-radius: 50%;
+	transition:
+		background 0.2s ease-in-out,
+		color 0.2s ease-in-out;
+
+	color: $white;
+	font-size: 1.2rem;
+
+	&:hover,
+	&:focus {
+		transition:
+			background 0.2s ease-in-out,
+			color 0.2s ease-in-out;
+		border: 2px solid $blue;
+		background: none;
+		color: $blue;
+	}
+
+	&--bg--gray {
+		background-color: $main;
+	}
+
+	@include bp($mobileS) {
+		width: 4.5rem;
+		height: 4.5rem;
+	}
+}
+
+.label-btn {
+	cursor: pointer;
+	span {
+		color: $main;
+		font-size: 1.6rem;
+		line-height: 3rem; /* 187.5% */
+
+		margin-left: 1.2rem;
+
+		@include bp($mobileS) {
+			font-size: 1.5rem;
+		}
+	}
+}
+
+.social {
+	// .social__link
+	&__link {
+		font-size: 3.7rem;
+		color: $main;
+		transition: color .2s linear;
+
+		&:hover {
+			transition: color .2s linear;
+			color: $blue;
+		}
+
+		@include bp($mobileS) {
+			font-size: 2.6rem;
+		}
+	}
+}
+
+.form {
+	// .form__item
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: 5.275rem;
+
+			@include bp($mobileS) {
+				margin-bottom: 4rem;
+			}
+		}
+
+		@include bp($mobileS) {
+			&:nth-child(3) {
+				margin-bottom: 3rem;
+			}
+		}
+	}
+	// .form__label
+	&__label {
+		width: 100%;
+		position: relative;
+	}
+	// .form__placeholder
+	&__placeholder {
+		position: absolute;
+		top: -1rem;
+		left: 1.7rem;
+
+		color: #f2f2f2;
+		font-size: 1.8rem;
+		font-weight: 300;
+		line-height: 133.687%; /* 24.064px */
+
+		background-color: $main;
+		border-radius: 1rem;
+		padding: 0 1rem;
+
+		@include bp($mobileS) {
+			font-size: 1.5rem;
+		}
+	}
+	// .form__input
+	&__input {
+		display: block;
+		width: 100%;
+		padding: 1.9rem;
+
+		border-radius: 2rem;
+		border: 1.5px solid rgba(#f2f2f2, 0.5);
+		background: none;
+
+		color: $white;
+		font-size: 1.6rem;
+
+		&:focus {
+			border: 1.5px solid $blue;
+		}
+
+		@include bp($mobileS) {
+			border-radius: 1rem;
+			padding: 1.1rem;
+			font-size: 1.4rem;
+		}
+	}
+	// .form__textarea
+	&__textarea {
+		display: block;
+		width: 100%;
+		height: 14.5rem;
+		padding: 2rem;
+
+		border-radius: 2rem;
+		border: 1.5px solid rgba(#f2f2f2, 0.5);
+		background: none;
+
+		color: $white;
+		font-size: 1.6rem;
+		resize: none;
+
+		&::-webkit-scrollbar {
+			width: 5px;
+		}
+		&::-webkit-scrollbar-thumb {
+			border-radius: 10px;
+			background-color: rgba(#f2f2f2, 0.5);
+		}
+
+		&:focus {
+			border: 1.5px solid $blue;
+		}
+
+		@include bp($mobileS) {
+			height: 8rem;
+			border-radius: 1rem;
+			padding: 1.2rem;
+		}
+	}
+	// .form__btn
+	&__btn {
+		span {
+			color: $white;
+		}
+	}
+}
